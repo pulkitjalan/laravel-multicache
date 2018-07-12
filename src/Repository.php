@@ -126,7 +126,7 @@ class Repository extends IlluminateRepository implements CacheManyContract
      * @param  \DateTime|int  $minutes
      * @return void
      */
-    public function put($key, $value, $minutes)
+    public function put($key, $value, $minutes = null)
     {
         if (is_array($key) && is_array($value)) {
             $this->putMany(array_combine($key, $value), $minutes);
